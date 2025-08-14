@@ -8,7 +8,8 @@ export default defineConfig({
   extends: [
     "js/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:storybook/recommended",
   ],
   languageOptions: {
     globals: globals.browser,
