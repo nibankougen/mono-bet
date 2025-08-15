@@ -1,13 +1,10 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
   theme: {
     extend: {
       colors: {
-        ...colors,
-        'orange': '#f7931e',
-        'blue': '#29abe2',
-        'ivory': '#fffbee',
+        'mb-orange': '#f7931e',
+        'mb-blue': '#29abe2',
+        'mb-ivory': '#fffbee',
       }
     }
   }
