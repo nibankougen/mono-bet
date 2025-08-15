@@ -24,6 +24,7 @@
     "@eslint/js": "^9.33.0",
     "@storybook/addon-a11y": "^9.1.2",
     "@storybook/addon-docs": "^9.1.2",
+    "@storybook/addon-styling-webpack": "^2.0.0",
     "@storybook/addon-vitest": "^9.1.2",
     "@storybook/react-vite": "^9.1.2",
     "@types/rails__actioncable": "^6.1.11",
