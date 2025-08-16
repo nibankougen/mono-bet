@@ -19,6 +19,23 @@
       opacity: 0;
     }
   }
+  --animate-slide-in-right: slide-in-right 0.4s ease-out forwards;
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .transition-turn {
+    @apply transition-all ease-in-out duration-300;
+  }
 }
 
 :root {
