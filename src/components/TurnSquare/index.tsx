@@ -1,9 +1,9 @@
 export interface TurnSquareProps {
-  score: number;
   active: boolean;
+  score: number;
 }
 
-export const TurnSquare = ({ score, active }: TurnSquareProps) => {
+export const TurnSquare = ({ active, score }: TurnSquareProps) => {
   return (
     <div
       className={`${
