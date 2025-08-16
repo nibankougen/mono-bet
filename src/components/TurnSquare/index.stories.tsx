@@ -9,7 +9,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { payout: 1 },
+  args: { score: 1 },
 } satisfies Meta<typeof TurnSquare>;
 
 export default meta;

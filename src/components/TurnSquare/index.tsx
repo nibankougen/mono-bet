@@ -1,9 +1,9 @@
 export interface TurnSquareProps {
-  payout: number;
+  score: number;
   active: boolean;
 }
 
-export const TurnSquare = ({ payout, active }: TurnSquareProps) => {
+export const TurnSquare = ({ score, active }: TurnSquareProps) => {
   return (
     <div
       className={`${
@@ -13,7 +13,7 @@ export const TurnSquare = ({ payout, active }: TurnSquareProps) => {
       }
           text-center font-bold text-mb-black transition-all ease-in-out duration-300`}
     >
-      {payout}
+      {score}
     </div>
   );
 };
