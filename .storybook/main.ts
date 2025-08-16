@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import svgr from "vite-plugin-svgr";
 
 const config: StorybookConfig = {
   "stories": [
@@ -15,6 +16,11 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
-  }
+  },
+  "viteFinal": async (config) => {
+    config.plugins = config.plugins || [];
+    config.plugins.push(svgr());
+    return config;
+  },
 };
 export default config;
