@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Timer } from "./Timer";
 import { useState } from "react";
 
@@ -28,13 +27,13 @@ export const BetButton = ({
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
           <Timer startTime={startTime} endTime={endTime} />
         </div>
-        <RippleWrapper className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
           <div
             className={`w-full h-full rounded-full bg-mb-orange ${
-              active ? "animate-ripple" : "opacity-0"
+              active ? "animate-ripple-effect" : "opacity-0"
             }`}
           />
-        </RippleWrapper>
+        </div>
         <button
           type="button"
           aria-label={"Bet!"}
@@ -48,19 +47,3 @@ export const BetButton = ({
     </>
   );
 };
-
-const RippleWrapper = styled.div`
-  @keyframes ripple {
-    0% {
-      transform: scale(1);
-      opacity: 0.5;
-    }
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
-  }
-  .animate-ripple {
-    animation: ripple 0.5s ease-out forwards;
-  }
-`;
