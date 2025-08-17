@@ -31,7 +31,7 @@ const ColorTagMap: Record<number, string> = {
 export const Icon = ({ size, color, image, active = true }: IconProps) => {
   const className = `${SizeTagMap[size]} ${
     ColorTagMap[color]
-  } block transition-turn${!active && " opacity-40"}`;
+  } block transition-turn${active ? "" : " opacity-40"}`;
 
   switch (image) {
     case 0:
