@@ -5,6 +5,7 @@ export interface IconProps {
   size: IconSize;
   color: number;
   image: number;
+  active?: boolean;
 }
 
 type IconSize = 24 | 48;
@@ -24,10 +25,13 @@ const ColorTagMap: Record<number, string> = {
   6: "text-blue-500",
   7: "text-indigo-500",
   8: "text-purple-500",
+  9: "text-pink-500",
 };
 
-export const Icon = ({ size, color, image }: IconProps) => {
-  const className = `${SizeTagMap[size]} ${ColorTagMap[color]} block transition-turn`;
+export const Icon = ({ size, color, image, active = true }: IconProps) => {
+  const className = `${SizeTagMap[size]} ${
+    ColorTagMap[color]
+  } block transition-turn${!active && " opacity-40"}`;
 
   switch (image) {
     case 0:
